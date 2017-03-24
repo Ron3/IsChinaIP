@@ -40,11 +40,15 @@ class DB(object):
 
             serverName = "ron_server_%s" % sid
             cur = self.conn.cursor()
-            sql = "user %s" % serverName
+            sql = "use %s" % serverName
             cur.execute(sql)
 
             sql = "select pid, amount from pay where pid in %s " % strPidArray
-            print cur.execute(sql)
+            cur.execute(sql)
+            for row in cur:
+                print "row => ", row
+
+            cur.close()
 
 
     def _initConn(self):
