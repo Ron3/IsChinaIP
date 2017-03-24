@@ -87,3 +87,16 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# 忽略羡慕配置
+.idea
+
+# 忽略安装库
+Crypto
+pycrypto-2.4.1-py2.7.egg-info
+requests
+requests-2.13.0.dist-info
+
+hk_pid
+pidForIp.txt
+register.txt
